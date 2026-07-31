@@ -98,7 +98,7 @@ function PricingPage() {
                   cta={
                     <Link
                       to="/contact"
-                      className={`${plan.highlighted ? 'btn-primary' : 'btn-outline'} w-full inline-flex items-center justify-center pointer-events-auto relative z-20`}
+                      className={`${plan.highlighted ? 'btn-primary' : 'btn-outline'} w-full inline-flex items-center justify-center`}
                     >
                       Get started
                     </Link>
