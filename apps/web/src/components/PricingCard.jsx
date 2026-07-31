@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 
@@ -55,9 +56,9 @@ function PricingCard({
       </ul>
       
       <div className="mt-auto">
-        <button className={highlighted ? 'btn-primary w-full' : 'btn-outline w-full'}>
+        <Link to="/contact" className={highlighted ? 'btn-primary w-full' : 'btn-outline w-full'}>
           {ctaText}
-        </button>
+        </Link>
       </div>
     </motion.div>
   );
