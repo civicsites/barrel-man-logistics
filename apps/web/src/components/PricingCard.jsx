@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 
@@ -9,7 +8,7 @@ function PricingCard({
   period, 
   features, 
   highlighted = false, 
-  ctaText = "Get started",
+  cta,
   index = 0 
 }) {
   return (
@@ -17,7 +16,7 @@ function PricingCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className={`rounded-2xl p-8 flex flex-col h-full transition-all duration-300 ${
+      className={`relative rounded-2xl p-8 flex flex-col h-full transition-all duration-300 pointer-events-none ${
         highlighted 
           ? 'bg-primary text-primary-foreground shadow-2xl scale-105 ring-2 ring-accent' 
           : 'bg-card text-card-foreground shadow-lg hover:shadow-xl'
@@ -55,10 +54,8 @@ function PricingCard({
         ))}
       </ul>
       
-      <div className="mt-auto">
-        <Link to="/contact" className={highlighted ? 'btn-primary w-full' : 'btn-outline w-full'}>
-          {ctaText}
-        </Link>
+      <div className="mt-auto relative z-20 pointer-events-auto">
+        {cta}
       </div>
     </motion.div>
   );

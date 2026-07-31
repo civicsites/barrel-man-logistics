@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { DollarSign, Award, Calendar, Briefcase } from 'lucide-react';
@@ -84,7 +85,7 @@ function PricingPage() {
         {/* Pricing Cards */}
         <section className="py-24 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
               {pricingPlans.map((plan, index) => (
                 <PricingCard
                   key={index}
@@ -93,8 +94,15 @@ function PricingPage() {
                   period={plan.period}
                   features={plan.features}
                   highlighted={plan.highlighted}
-                  ctaText="Get started"
                   index={index}
+                  cta={
+                    <Link
+                      to="/contact"
+                      className={`${plan.highlighted ? 'btn-primary' : 'btn-outline'} w-full inline-flex items-center justify-center pointer-events-auto relative z-20`}
+                    >
+                      Get started
+                    </Link>
+                  }
                 />
               ))}
             </div>
