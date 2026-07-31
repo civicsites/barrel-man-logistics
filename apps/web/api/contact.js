@@ -112,4 +112,4 @@ module.exports = async function handler(req, res) {
     console.error('Contact form error:', error);
     return res.status(500).json({ error: 'An unexpected error occurred. Please try again or call us directly.' });
   }
-}
+};
