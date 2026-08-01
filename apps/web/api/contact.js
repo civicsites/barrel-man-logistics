@@ -29,7 +29,7 @@ function validateSubmission(body) {
   const email = sanitize(body.email);
   const phone = sanitize(body.phone);
   const serviceType = sanitize(body.serviceType);
-  const message = sanitize(body.message);
+  const message = sanitize(body.projectDetails ?? body.message);
 
   if (!name) errors.push('Name is required.');
   if (!email) errors.push('Email is required.');

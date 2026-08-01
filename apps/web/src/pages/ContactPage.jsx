@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { Phone, Mail, MapPin, Send, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import { Input } from '@/components/ui/input';
@@ -17,16 +16,16 @@ import {
 } from '@/components/ui/select';
 
 function ContactPage() {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     serviceType: '',
-    message: '',
+    projectDetails: '',
     _gotcha: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('idle');
+  const [statusMessage, setStatusMessage] = useState('');
   
   const handleChange = (e) => {
     setFormData({
@@ -44,23 +43,30 @@ function ContactPage() {
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (!formData.name || !formData.email || !formData.phone || !formData.serviceType || !formData.message) {
-      toast({
-        title: "Missing information",
-        description: "Please fill in all required fields.",
-        variant: "destructive"
-      });
+    setStatusMessage('');
+
+    if (!formData.name || !formData.email || !formData.phone || !formData.serviceType || !formData.projectDetails) {
+      setSubmitStatus('error');
+      setStatusMessage('Please fill in all required fields.');
       return;
     }
     
-    setIsSubmitting(true);
+    setSubmitStatus('loading');
     
     try {
+      const payload = {
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        phone: formData.phone.trim(),
+        serviceType: formData.serviceType,
+        projectDetails: formData.projectDetails.trim(),
+        _gotcha: formData._gotcha,
+      };
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json().catch(() => ({}));
@@ -69,28 +75,23 @@ function ContactPage() {
         throw new Error(result.error || 'Submission failed');
       }
       
-      toast({
-        title: "Quote request received",
-        description: "Thank you! We'll contact you within 24 hours to discuss your project."
-      });
+      setSubmitStatus('success');
+      setStatusMessage("Thank you! We'll contact you within 24 hours to discuss your project.");
       
       setFormData({
         name: '',
         email: '',
         phone: '',
         serviceType: '',
-        message: '',
+        projectDetails: '',
         _gotcha: ''
       });
     } catch (error) {
-      console.error("Error submitting form:", error);
-      toast({
-        title: "Submission failed",
-        description: error.message || "There was an error submitting your request. Please try again or call us directly at (757) 618-0273.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+      setStatusMessage(
+        error.message || 'There was an error submitting your request. Please try again or call us directly at (757) 618-0273.'
+      );
     }
   };
   
@@ -103,6 +104,8 @@ function ContactPage() {
     'Other'
   ];
   
+  const isSubmitting = submitStatus === 'loading';
+
   return (
     <>
       <Helmet>
@@ -143,6 +146,7 @@ function ContactPage() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
+                className="relative z-10"
               >
                 <h2 
                   className="text-3xl font-bold text-foreground mb-6"
@@ -154,7 +158,7 @@ function ContactPage() {
                   Fill out the form below and we'll get back to you within 24 hours with a customized quote for your project.
                 </p>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} noValidate className="space-y-6">
                   {/* Honeypot field — hidden from users, traps bots */}
                   <div aria-hidden="true" className="absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden">
                     <Label htmlFor="_gotcha">Leave this field empty</Label>
@@ -177,7 +181,6 @@ function ContactPage() {
                       type="text"
                       value={formData.name}
                       onChange={handleChange}
-                      required
                       className="mt-2 text-foreground bg-background"
                       placeholder="Your full name"
                     />
@@ -191,7 +194,6 @@ function ContactPage() {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      required
                       className="mt-2 text-foreground bg-background"
                       placeholder="your.email@example.com"
                     />
@@ -205,7 +207,6 @@ function ContactPage() {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      required
                       className="mt-2 text-foreground bg-background"
                       placeholder="(757) 555-0123"
                     />
@@ -213,8 +214,8 @@ function ContactPage() {
                   
                   <div>
                     <Label htmlFor="serviceType" className="text-foreground">Service Type *</Label>
-                    <Select value={formData.serviceType} onValueChange={handleServiceTypeChange} required>
-                      <SelectTrigger className="mt-2 text-foreground bg-background">
+                    <Select value={formData.serviceType} onValueChange={handleServiceTypeChange}>
+                      <SelectTrigger id="serviceType" className="mt-2 text-foreground bg-background">
                         <SelectValue placeholder="Select a service type" />
                       </SelectTrigger>
                       <SelectContent>
@@ -228,26 +229,61 @@ function ContactPage() {
                   </div>
                   
                   <div>
-                    <Label htmlFor="message" className="text-foreground">Project Details *</Label>
+                    <Label htmlFor="projectDetails" className="text-foreground">Project Details *</Label>
                     <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
+                      id="projectDetails"
+                      name="projectDetails"
+                      value={formData.projectDetails}
                       onChange={handleChange}
-                      required
                       rows={6}
                       className="mt-2 text-foreground bg-background"
                       placeholder="Tell us about your project, including size, timeline, and any specific requirements..."
                     />
                   </div>
+
+                  {submitStatus === 'loading' && (
+                    <div
+                      role="status"
+                      aria-live="polite"
+                      className="flex items-center gap-3 rounded-lg border border-border bg-muted px-4 py-3 text-foreground"
+                    >
+                      <Loader2 className="h-5 w-5 animate-spin text-accent" />
+                      <span>Sending your quote request...</span>
+                    </div>
+                  )}
+
+                  {submitStatus === 'success' && (
+                    <div
+                      role="status"
+                      aria-live="polite"
+                      className="flex items-start gap-3 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-green-900"
+                    >
+                      <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      <span>{statusMessage}</span>
+                    </div>
+                  )}
+
+                  {submitStatus === 'error' && (
+                    <div
+                      role="alert"
+                      aria-live="assertive"
+                      className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-red-900"
+                    >
+                      <AlertCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
+                      <span>{statusMessage}</span>
+                    </div>
+                  )}
                   
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-primary w-full inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="btn-primary w-full inline-flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed relative z-10 pointer-events-auto"
                   >
                     {isSubmitting ? (
-                      <>Sending...</>
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        Sending...
+                      </>
                     ) : (
                       <>
                         <Send className="w-4 h-4" />

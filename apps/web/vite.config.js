@@ -8,6 +8,7 @@ import iframeRouteRestorationPlugin from './plugins/vite-plugin-iframe-route-res
 import sitePagesPlugin from './plugins/vite-plugin-site-pages.js';
 import pocketbaseAuthPlugin from './plugins/vite-plugin-pocketbase-auth.js';
 import sessionJournalPlugin from './plugins/session-journal/vite-plugin-session-journal.js';
+import contactApiDevPlugin from './plugins/vite-plugin-contact-api-dev.js';
 
 import { readFileSync } from 'node:fs';
 
@@ -361,7 +362,7 @@ export default defineConfig({
 	},
 	customLogger: logger,
 	plugins: [
-		...(isDev ? [inlineEditPlugin(), editModeDevPlugin(), selectionModePlugin(), iframeRouteRestorationPlugin(), sitePagesPlugin(), pocketbaseAuthPlugin(), sessionJournalPlugin()] : []),
+		...(isDev ? [inlineEditPlugin(), editModeDevPlugin(), selectionModePlugin(), iframeRouteRestorationPlugin(), sitePagesPlugin(), pocketbaseAuthPlugin(), sessionJournalPlugin(), contactApiDevPlugin()] : []),
 		react(),
 		addTransformIndexHtml
 	],
