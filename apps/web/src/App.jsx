@@ -23,6 +23,7 @@ function App() {
                 <Route path="/why-choose-us" element={<WhyChooseUsPage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/sizes" element={<DumpsterSizesPage />} />
+                <Route path="/dumpster-sizes" element={<DumpsterSizesPage />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/faq" element={<FAQPage />} />
                 <Route path="/rules" element={<DumpsterRulesPage />} />
