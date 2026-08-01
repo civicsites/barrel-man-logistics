@@ -1,4 +1,5 @@
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL_TO || 'barrelmanlogistics@outlook.com';
+import { Resend } from 'resend';
+
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_FIELD_LENGTH = 5000;
 
@@ -29,35 +30,36 @@ function validateSubmission(body) {
   const email = sanitize(body.email);
   const phone = sanitize(body.phone);
   const serviceType = sanitize(body.serviceType);
-  const message = sanitize(body.projectDetails ?? body.message);
+  const projectDetails = sanitize(body.projectDetails ?? body.message);
 
   if (!name) errors.push('Name is required.');
   if (!email) errors.push('Email is required.');
   else if (!EMAIL_REGEX.test(email)) errors.push('Email format is invalid.');
   if (!phone) errors.push('Phone is required.');
   if (!serviceType) errors.push('Service type is required.');
-  if (!message) errors.push('Project details are required.');
+  if (!projectDetails) errors.push('Project details are required.');
 
   if (name.length > 200) errors.push('Name is too long.');
   if (email.length > 320) errors.push('Email is too long.');
   if (phone.length > 50) errors.push('Phone is too long.');
   if (serviceType.length > 200) errors.push('Service type is too long.');
-  if (message.length > MAX_FIELD_LENGTH) errors.push('Project details are too long.');
+  if (projectDetails.length > MAX_FIELD_LENGTH) errors.push('Project details are too long.');
 
   return {
     spam: false,
     errors,
-    data: { name, email, phone, serviceType, message },
+    data: { name, email, phone, serviceType, projectDetails },
   };
 }
 
-module.exports = async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed.' });
   }
 
   const apiKey = process.env.RESEND_API_KEY;
   const fromEmail = process.env.RESEND_FROM_EMAIL;
+  const contactToEmail = process.env.CONTACT_TO_EMAIL || 'barrelmanlogistics@outlook.com';
 
   if (!apiKey || !fromEmail) {
     console.error('Missing RESEND_API_KEY or RESEND_FROM_EMAIL environment variables.');
@@ -74,7 +76,7 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: validation.errors[0], errors: validation.errors });
   }
 
-  const { name, email, phone, serviceType, message } = validation.data;
+  const { name, email, phone, serviceType, projectDetails } = validation.data;
   const htmlBody = `
     <h2>New Contact Form Submission</h2>
     <p><strong>Name:</strong> ${escapeHtml(name)}</p>
@@ -82,28 +84,21 @@ module.exports = async function handler(req, res) {
     <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
     <p><strong>Service Type:</strong> ${escapeHtml(serviceType)}</p>
     <p><strong>Project Details:</strong></p>
-    <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
+    <p>${escapeHtml(projectDetails).replace(/\n/g, '<br>')}</p>
   `;
 
   try {
-    const response = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: fromEmail,
-        to: [CONTACT_EMAIL],
-        reply_to: email,
-        subject: `New Quote Request from ${name}`,
-        html: htmlBody,
-      }),
+    const resend = new Resend(apiKey);
+    const { error } = await resend.emails.send({
+      from: fromEmail,
+      to: [contactToEmail],
+      replyTo: email,
+      subject: `New Quote Request from ${name}`,
+      html: htmlBody,
     });
 
-    if (!response.ok) {
-      const errorBody = await response.text();
-      console.error('Resend API error:', response.status, errorBody);
+    if (error) {
+      console.error('Resend API error:', error);
       return res.status(502).json({ error: 'Failed to send your message. Please try again or call us directly.' });
     }
 
@@ -112,4 +107,4 @@ module.exports = async function handler(req, res) {
     console.error('Contact form error:', error);
     return res.status(500).json({ error: 'An unexpected error occurred. Please try again or call us directly.' });
   }
-};
+}
