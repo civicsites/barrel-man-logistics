@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Routes, BrowserRouter as Router, Navigate } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop.jsx';
 import HomePage from './pages/HomePage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
@@ -22,7 +22,7 @@ function App() {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/why-choose-us" element={<WhyChooseUsPage />} />
                 <Route path="/services" element={<ServicesPage />} />
-                <Route path="/sizes" element={<DumpsterSizesPage />} />
+                <Route path="/sizes" element={<Navigate to="/dumpster-sizes" replace />} />
                 <Route path="/dumpster-sizes" element={<DumpsterSizesPage />} />
                 <Route path="/pricing" element={<PricingPage />} />
                 <Route path="/faq" element={<FAQPage />} />
