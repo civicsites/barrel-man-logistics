@@ -53,16 +53,20 @@ function FAQPage() {
       answer: 'We offer same-day service when available. Contact us as early as possible and we\'ll work to accommodate your timeline. For guaranteed delivery on a specific date, we recommend booking in advance.'
     }
   ];
-  
+
   return (
     <>
       <Helmet>
         <title>FAQ - Barrel Man Logistics | Dumpster Rental Questions Answered</title>
         <meta name="description" content="Frequently asked questions about dumpster rentals in Virginia Beach. Learn about pricing, discounts, service areas, rental periods, and what you can dispose of." />
+        <link
+          rel="canonical"
+          href="https://barrelmandumpsters.com/about"
+        />
       </Helmet>
-      
+
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
@@ -72,7 +76,7 @@ function FAQPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -84,7 +88,7 @@ function FAQPage() {
             </motion.div>
           </div>
         </section>
-        
+
         {/* FAQ Section */}
         <section className="py-24 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,8 +99,8 @@ function FAQPage() {
             >
               <Accordion type="single" collapsible className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <AccordionItem 
-                    key={index} 
+                  <AccordionItem
+                    key={index}
                     value={`item-${index}`}
                     className="bg-card rounded-xl px-6 shadow-sm border-none"
                   >
@@ -112,11 +116,11 @@ function FAQPage() {
             </motion.div>
           </div>
         </section>
-        
+
         {/* CTA Section */}
         <section className="py-24 bg-muted">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold text-foreground mb-6"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
@@ -131,7 +135,7 @@ function FAQPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   );

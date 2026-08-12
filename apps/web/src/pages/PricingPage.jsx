@@ -50,16 +50,20 @@ function PricingPage() {
       ]
     }
   ];
-  
+
   return (
     <>
       <Helmet>
         <title>Pricing - Barrel Man Logistics | Transparent Dumpster Rental Rates</title>
         <meta name="description" content="Clear, upfront pricing for dumpster rentals in Virginia Beach. Standard rentals from $450, monthly programs available. Veteran and first responder discounts." />
+        <link
+          rel="canonical"
+          href="https://barrelmandumpsters.com/about"
+        />
       </Helmet>
-      
+
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
@@ -69,7 +73,7 @@ function PricingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -81,7 +85,7 @@ function PricingPage() {
             </motion.div>
           </div>
         </section>
-        
+
         {/* Pricing Cards */}
         <section className="py-24 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -108,13 +112,13 @@ function PricingPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Discount Section */}
         <section className="py-24 bg-muted">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-accent text-accent-foreground rounded-2xl p-12 text-center">
               <Award className="w-16 h-16 mx-auto mb-6" />
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-6"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -129,19 +133,19 @@ function PricingPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Special Pricing */}
         <section className="py-24 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold text-foreground mb-4"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
                 Additional Pricing Options
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -177,7 +181,7 @@ function PricingPage() {
                   </li>
                 </ul>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -215,11 +219,11 @@ function PricingPage() {
             </div>
           </div>
         </section>
-        
+
         {/* CTA Section */}
         <section className="py-24 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
@@ -239,7 +243,7 @@ function PricingPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   );

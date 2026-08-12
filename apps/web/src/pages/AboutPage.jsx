@@ -11,10 +11,14 @@ function AboutPage() {
       <Helmet>
         <title>About Us - Barrel Man Logistics | Veteran-Owned Dumpster Rental</title>
         <meta name="description" content="Learn about Barrel Man Logistics, a Service-Disabled Veteran-Owned Small Business providing reliable dumpster rental services in Virginia Beach and Hampton Roads." />
+        <link
+          rel="canonical"
+          href="https://barrelmandumpsters.com/about"
+        />
       </Helmet>
-      
+
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
@@ -24,7 +28,7 @@ function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -36,7 +40,7 @@ function AboutPage() {
             </motion.div>
           </div>
         </section>
-        
+
         {/* Mission Section */}
         <section className="py-24 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,7 +50,7 @@ function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="prose prose-lg max-w-none"
             >
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold text-foreground mb-6"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -64,19 +68,19 @@ function AboutPage() {
             </motion.div>
           </div>
         </section>
-        
+
         {/* Values Section */}
         <section className="py-24 bg-muted">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold text-foreground mb-4"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
                 Our Core Values
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -94,7 +98,7 @@ function AboutPage() {
                   As a Service-Disabled Veteran-Owned Small Business, we bring military precision and commitment to every project. Our SDVOSB certification opens doors for government contracts and demonstrates our dedication to quality service.
                 </p>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -111,7 +115,7 @@ function AboutPage() {
                   We show up when we say we will. Our customers depend on us for timely delivery and pickup, and we take that responsibility seriously. No excuses, no delays—just dependable service.
                 </p>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -128,7 +132,7 @@ function AboutPage() {
                   No hidden fees or surprise charges. We provide clear, upfront pricing so you know exactly what to expect. Our veteran and first responder discounts show our appreciation for those who serve.
                 </p>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -148,7 +152,7 @@ function AboutPage() {
             </div>
           </div>
         </section>
-        
+
         {/* SDVOSB Section */}
         <section className="py-24 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -159,7 +163,7 @@ function AboutPage() {
               className="bg-primary text-primary-foreground rounded-2xl p-12 text-center"
             >
               <Award className="w-16 h-16 text-accent mx-auto mb-6" />
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold mb-6"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -175,7 +179,7 @@ function AboutPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   );

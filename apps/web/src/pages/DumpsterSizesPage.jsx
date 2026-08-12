@@ -46,16 +46,20 @@ function DumpsterSizesPage() {
       ]
     }
   ];
-  
+
   return (
     <>
       <Helmet>
         <title>Dumpster Sizes - Barrel Man Logistics | 10 & 30 Yard Dumpsters</title>
         <meta name="description" content="Choose the right dumpster size for your project. 10 yard dumpsters for small projects, 30 yard dumpsters for major renovations and construction in Virginia Beach." />
+        <link
+          rel="canonical"
+          href="https://barrelmandumpsters.com/about"
+        />
       </Helmet>
-      
+
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
@@ -65,7 +69,7 @@ function DumpsterSizesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -77,7 +81,7 @@ function DumpsterSizesPage() {
             </motion.div>
           </div>
         </section>
-        
+
         {/* Sizes Comparison */}
         <section className="py-24 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,17 +97,17 @@ function DumpsterSizesPage() {
                   <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                     <size.icon className="w-8 h-8 text-accent" />
                   </div>
-                  
-                  <h2 
+
+                  <h2
                     className="text-3xl md:text-4xl font-bold text-foreground mb-2"
                     style={{ letterSpacing: '-0.02em' }}
                   >
                     {size.size}
                   </h2>
-                  
+
                   <p className="text-muted-foreground mb-4">{size.dimensions}</p>
                   <p className="text-sm text-muted-foreground mb-6 font-medium">{size.capacity}</p>
-                  
+
                   <div className="mb-6">
                     <h3 className="text-lg font-semibold text-foreground mb-3">Ideal for:</h3>
                     <ul className="space-y-2">
@@ -115,7 +119,7 @@ function DumpsterSizesPage() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-3">Not recommended for:</h3>
                     <ul className="space-y-2">
@@ -132,12 +136,12 @@ function DumpsterSizesPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Help Section */}
         <section className="py-24 bg-muted">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Phone className="w-16 h-16 text-accent mx-auto mb-6" />
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold text-foreground mb-6"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
@@ -151,17 +155,17 @@ function DumpsterSizesPage() {
             </a>
           </div>
         </section>
-        
+
         {/* Tips Section */}
         <section className="py-24 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
               Sizing Tips
             </h2>
-            
+
             <div className="space-y-6">
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">When in doubt, go bigger</h3>
@@ -169,14 +173,14 @@ function DumpsterSizesPage() {
                   It's better to have extra space than to run out. Overage fees can add up quickly if you exceed the weight limit on a smaller dumpster.
                 </p>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Consider the weight, not just volume</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Heavy materials like concrete, dirt, and roofing shingles can max out weight limits quickly. Let us know what you're disposing of so we can recommend the right size.
                 </p>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Think about access</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -187,7 +191,7 @@ function DumpsterSizesPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   );

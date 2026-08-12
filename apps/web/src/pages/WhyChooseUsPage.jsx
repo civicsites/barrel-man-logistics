@@ -34,16 +34,23 @@ function WhyChooseUsPage() {
       description: 'Our SDVOSB certification qualifies us for government contracts and Virginia SWaM (Small, Women-owned, and Minority-owned) business programs. We are ready to support your procurement needs.'
     }
   ];
-  
+
   return (
     <>
       <Helmet>
         <title>Why Choose Us - Barrel Man Logistics | Veteran-Owned Dumpster Rental</title>
-        <meta name="description" content="Discover why businesses and homeowners choose Barrel Man Logistics for dumpster rentals. SDVOSB certified, reliable service, transparent pricing, and government contract ready." />
+        <meta
+          name="description"
+          content="Discover why businesses and homeowners choose Barrel Man Logistics for reliable dumpster rentals, transparent pricing, and veteran-owned service."
+        />
+        <link
+          rel="canonical"
+          href="https://barrelmandumpsters.com/why-choose-us"
+        />
       </Helmet>
-      
+
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
@@ -53,7 +60,7 @@ function WhyChooseUsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -65,7 +72,7 @@ function WhyChooseUsPage() {
             </motion.div>
           </div>
         </section>
-        
+
         {/* Features Section */}
         <section className="py-24 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,19 +89,19 @@ function WhyChooseUsPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Benefits Grid */}
         <section className="py-24 bg-muted">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold text-foreground mb-4"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
                 What Sets Us Apart
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -108,7 +115,7 @@ function WhyChooseUsPage() {
                   Officially certified Service-Disabled Veteran-Owned Small Business
                 </p>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -121,7 +128,7 @@ function WhyChooseUsPage() {
                   Emergency and after-hours service when you need it most
                 </p>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -134,7 +141,7 @@ function WhyChooseUsPage() {
                   Based in Virginia Beach, serving all surrounding communities
                 </p>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -147,7 +154,7 @@ function WhyChooseUsPage() {
                   10% off for veterans, law enforcement, and first responders
                 </p>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -160,7 +167,7 @@ function WhyChooseUsPage() {
                   Qualified for government contracts and SWaM programs
                 </p>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -176,11 +183,11 @@ function WhyChooseUsPage() {
             </div>
           </div>
         </section>
-        
+
         {/* CTA Section */}
         <section className="py-24 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
@@ -195,7 +202,7 @@ function WhyChooseUsPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   );

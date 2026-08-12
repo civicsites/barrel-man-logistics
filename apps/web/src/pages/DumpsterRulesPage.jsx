@@ -44,16 +44,20 @@ function DumpsterRulesPage() {
       reason: 'Refrigerators, air conditioners, and freezers require freon removal before disposal'
     }
   ];
-  
+
   return (
     <>
       <Helmet>
         <title>Dumpster Rules - Barrel Man Logistics | Prohibited Items & Guidelines</title>
         <meta name="description" content="Important dumpster rental rules and prohibited items. Learn what you cannot dispose of in our dumpsters including paint, tires, hazardous materials, and appliances with freon." />
+        <link
+          rel="canonical"
+          href="https://barrelmandumpsters.com/about"
+        />
       </Helmet>
-      
+
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
@@ -63,7 +67,7 @@ function DumpsterRulesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -75,7 +79,7 @@ function DumpsterRulesPage() {
             </motion.div>
           </div>
         </section>
-        
+
         {/* Alert Section */}
         <section className="py-12 bg-destructive/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,12 +94,12 @@ function DumpsterRulesPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Prohibited Items */}
         <section className="py-24 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold text-foreground mb-4"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -105,7 +109,7 @@ function DumpsterRulesPage() {
                 The following items are strictly prohibited from disposal in our dumpsters
               </p>
             </div>
-            
+
             <div className="space-y-4">
               {prohibitedItems.map((item, index) => (
                 <motion.div
@@ -127,17 +131,17 @@ function DumpsterRulesPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Acceptable Items */}
         <section className="py-24 bg-muted">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
               What You Can Dispose Of
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Household Items</h3>
@@ -160,7 +164,7 @@ function DumpsterRulesPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Construction Debris</h3>
                 <ul className="space-y-2">
@@ -182,7 +186,7 @@ function DumpsterRulesPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Yard Waste</h3>
                 <ul className="space-y-2">
@@ -204,7 +208,7 @@ function DumpsterRulesPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Other Materials</h3>
                 <ul className="space-y-2">
@@ -229,12 +233,12 @@ function DumpsterRulesPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Contact Section */}
         <section className="py-24 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Phone className="w-16 h-16 text-accent mx-auto mb-6" />
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold text-foreground mb-6"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
@@ -249,7 +253,7 @@ function DumpsterRulesPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   );

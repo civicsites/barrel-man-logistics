@@ -10,47 +10,60 @@ function ServiceAreaPage() {
   const serviceAreas = [
     {
       city: 'Virginia Beach',
-      description: 'Our home base. We provide comprehensive dumpster rental services throughout Virginia Beach for residential and commercial projects.'
+      description:
+        'Dumpster rental in Virginia Beach, Virginia for home cleanouts, renovations, construction projects, roofing jobs, landscaping debris, and commercial work.'
     },
     {
       city: 'Norfolk',
-      description: 'Serving all of Norfolk with reliable dumpster rentals for construction sites, home renovations, and business needs.'
+      description:
+        'Reliable dumpster rental in Norfolk, Virginia for residential cleanouts, remodeling projects, construction debris, commercial jobs, and property cleanups.'
     },
     {
       city: 'Chesapeake',
-      description: 'Fast, dependable dumpster delivery and pickup throughout Chesapeake for projects of all sizes.'
+      description:
+        'Dependable dumpster rental in Chesapeake, Virginia with convenient delivery and pickup for home projects, renovations, construction sites, and commercial properties.'
     },
     {
       city: 'Portsmouth',
-      description: 'Professional dumpster rental services for Portsmouth residents, contractors, and businesses.'
+      description:
+        'Professional dumpster rental in Portsmouth, Virginia for homeowners, contractors, businesses, renovation projects, construction debris, and property cleanouts.'
     },
     {
       city: 'Suffolk',
-      description: 'Comprehensive waste management solutions for Suffolk, including residential and commercial dumpster rentals.'
+      description:
+        'Dumpster rental in Suffolk, Virginia for residential cleanouts, remodeling projects, construction work, commercial properties, landscaping debris, and more.'
     },
     {
       city: 'Hampton',
-      description: 'Reliable dumpster rental services for Hampton area projects, from home cleanouts to construction sites.'
+      description:
+        'Reliable dumpster rental in Hampton, Virginia for home cleanouts, renovations, construction projects, commercial jobs, and property improvement work.'
     },
     {
       city: 'Newport News',
-      description: 'Serving Newport News with professional dumpster rentals and flexible service options.'
+      description:
+        'Professional dumpster rental in Newport News, Virginia with flexible service for residential projects, renovations, construction debris, commercial work, and cleanouts.'
     },
     {
       city: 'Surrounding Hampton Roads Communities',
-      description: 'We also serve surrounding areas throughout Hampton Roads. Contact us to confirm service availability in your location.'
+      description:
+        'Barrel Man Logistics also serves surrounding communities throughout Hampton Roads. Contact us to confirm dumpster rental availability for your location.'
     }
   ];
-  
+
   return (
     <>
       <Helmet>
         <title>Service Area - Barrel Man Logistics | Virginia Beach & Hampton Roads</title>
-        <meta name="description" content="Barrel Man Logistics serves Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and surrounding Hampton Roads communities with dumpster rental services." />
+        <meta
+          name="description"
+          content="Barrel Man Logistics serves Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and surrounding Hampton Roads communities."
+        />
+        <link
+          rel="canonical"
+          href="https://barrelmandumpsters.com/service-area"
+        />
       </Helmet>
-      
-      <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
@@ -60,19 +73,19 @@ function ServiceAreaPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
-                Service Area
+                Dumpster Rental Service Area in Hampton Roads
               </h1>
               <p className="text-xl text-primary-foreground/90 leading-relaxed">
-                Proudly serving Virginia Beach and all of Hampton Roads
+                Reliable dumpster rental throughout Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and surrounding Hampton Roads communities.
               </p>
             </motion.div>
           </div>
         </section>
-        
+
         {/* Map Section */}
         <section className="py-24 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +95,7 @@ function ServiceAreaPage() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 
+                <h2
                   className="text-3xl md:text-4xl font-bold text-foreground mb-6"
                   style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
                 >
@@ -104,7 +117,7 @@ function ServiceAreaPage() {
                   </div>
                 </div>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -116,19 +129,19 @@ function ServiceAreaPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Cities Grid */}
         <section className="py-24 bg-muted">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold text-foreground mb-4"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
                 Communities We Serve
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceAreas.map((area, index) => (
                 <motion.div
@@ -150,17 +163,17 @@ function ServiceAreaPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Coverage Details */}
         <section className="py-24 bg-background">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
               What Our Service Area Means for You
             </h2>
-            
+
             <div className="space-y-6">
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Fast Response Times</h3>
@@ -168,14 +181,14 @@ function ServiceAreaPage() {
                   Being locally based means we can respond quickly to your needs. Same-day service is often available, and we understand the local area to provide efficient delivery and pickup.
                 </p>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Local Knowledge</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   We know Hampton Roads. We understand local regulations, traffic patterns, and the unique needs of our communities. This local expertise ensures smooth, hassle-free service.
                 </p>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Community Commitment</h3>
                 <p className="text-muted-foreground leading-relaxed">
@@ -185,12 +198,12 @@ function ServiceAreaPage() {
             </div>
           </div>
         </section>
-        
+
         {/* CTA Section */}
         <section className="py-24 bg-primary text-primary-foreground">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Phone className="w-16 h-16 text-accent mx-auto mb-6" />
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold mb-6"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
@@ -205,7 +218,7 @@ function ServiceAreaPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   );

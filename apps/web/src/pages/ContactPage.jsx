@@ -26,21 +26,21 @@ function ContactPage() {
   });
   const [submitStatus, setSubmitStatus] = useState('idle');
   const [statusMessage, setStatusMessage] = useState('');
-  
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-  
+
   const handleServiceTypeChange = (value) => {
     setFormData({
       ...formData,
       serviceType: value
     });
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatusMessage('');
@@ -50,9 +50,9 @@ function ContactPage() {
       setStatusMessage('Please fill in all required fields.');
       return;
     }
-    
+
     setSubmitStatus('loading');
-    
+
     try {
       const payload = {
         name: formData.name.trim(),
@@ -74,10 +74,10 @@ function ContactPage() {
       if (!response.ok) {
         throw new Error(result.error || 'Submission failed');
       }
-      
+
       setSubmitStatus('success');
       setStatusMessage("Thank you! We'll contact you within 24 hours to discuss your project.");
-      
+
       setFormData({
         name: '',
         email: '',
@@ -94,7 +94,7 @@ function ContactPage() {
       );
     }
   };
-  
+
   const serviceTypes = [
     'Residential Dumpster Rental',
     'Commercial Dumpster Rental',
@@ -103,7 +103,7 @@ function ContactPage() {
     'Recurring Service Program',
     'Other'
   ];
-  
+
   const isSubmitting = submitStatus === 'loading';
 
   return (
@@ -111,10 +111,14 @@ function ContactPage() {
       <Helmet>
         <title>Contact Us - Barrel Man Logistics | Get a Free Quote</title>
         <meta name="description" content="Contact Barrel Man Logistics for a free dumpster rental quote. Call (757) 618-0273 or fill out our form. Serving Virginia Beach and Hampton Roads." />
+        <link
+          rel="canonical"
+          href="https://barrelmandumpsters.com/about"
+        />
       </Helmet>
-      
+
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
@@ -124,7 +128,7 @@ function ContactPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -136,7 +140,7 @@ function ContactPage() {
             </motion.div>
           </div>
         </section>
-        
+
         {/* Contact Section */}
         <section className="py-24 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -148,7 +152,7 @@ function ContactPage() {
                 transition={{ duration: 0.6 }}
                 className="relative z-10"
               >
-                <h2 
+                <h2
                   className="text-3xl font-bold text-foreground mb-6"
                   style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
                 >
@@ -157,7 +161,7 @@ function ContactPage() {
                 <p className="text-muted-foreground mb-8 leading-relaxed">
                   Fill out the form below and we'll get back to you within 24 hours with a customized quote for your project.
                 </p>
-                
+
                 <form onSubmit={handleSubmit} noValidate className="space-y-6">
                   {/* Honeypot field — hidden from users, traps bots */}
                   <div aria-hidden="true" className="absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden">
@@ -185,7 +189,7 @@ function ContactPage() {
                       placeholder="Your full name"
                     />
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="email" className="text-foreground">Email *</Label>
                     <Input
@@ -198,7 +202,7 @@ function ContactPage() {
                       placeholder="your.email@example.com"
                     />
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="phone" className="text-foreground">Phone *</Label>
                     <Input
@@ -211,7 +215,7 @@ function ContactPage() {
                       placeholder="(757) 555-0123"
                     />
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="serviceType" className="text-foreground">Service Type *</Label>
                     <Select value={formData.serviceType} onValueChange={handleServiceTypeChange}>
@@ -227,7 +231,7 @@ function ContactPage() {
                       </SelectContent>
                     </Select>
                   </div>
-                  
+
                   <div>
                     <Label htmlFor="projectDetails" className="text-foreground">Project Details *</Label>
                     <Textarea
@@ -273,7 +277,7 @@ function ContactPage() {
                       <span>{statusMessage}</span>
                     </div>
                   )}
-                  
+
                   <button
                     type="submit"
                     disabled={isSubmitting}
@@ -293,20 +297,20 @@ function ContactPage() {
                   </button>
                 </form>
               </motion.div>
-              
+
               {/* Contact Info */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <h2 
+                <h2
                   className="text-3xl font-bold text-foreground mb-6"
                   style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
                 >
                   Contact Information
                 </h2>
-                
+
                 <div className="space-y-6 mb-12">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -314,8 +318,8 @@ function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">Phone</p>
-                      <a 
-                        href="tel:7576180273" 
+                      <a
+                        href="tel:7576180273"
                         className="text-lg text-accent hover:text-accent/80 transition-colors duration-200"
                       >
                         (757) 618-0273
@@ -325,22 +329,22 @@ function ContactPage() {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Mail className="w-6 h-6 text-accent" />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">Email</p>
-                      <a 
-                        href="mailto:barrelmanlogistics@outlook.com" 
+                      <a
+                        href="mailto:barrelmanlogistics@outlook.com"
                         className="text-lg text-accent hover:text-accent/80 transition-colors duration-200 break-all"
                       >
                         barrelmanlogistics@outlook.com
                       </a>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-6 h-6 text-accent" />
@@ -354,7 +358,7 @@ function ContactPage() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-primary text-primary-foreground rounded-2xl p-8">
                   <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
                   <ul className="space-y-3">
@@ -384,19 +388,19 @@ function ContactPage() {
             </div>
           </div>
         </section>
-        
+
         {/* Service CTAs */}
         <section className="py-24 bg-muted">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 
+              <h2
                 className="text-3xl md:text-4xl font-bold text-foreground mb-4"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
                 What Can We Help You With?
               </h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Residential Rentals</h3>
@@ -407,7 +411,7 @@ function ContactPage() {
                   Get a quote →
                 </a>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Commercial Rentals</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
@@ -417,7 +421,7 @@ function ContactPage() {
                   Get a quote →
                 </a>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Construction Projects</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
@@ -427,7 +431,7 @@ function ContactPage() {
                   Get a quote →
                 </a>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Government Contracts</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
@@ -437,7 +441,7 @@ function ContactPage() {
                   Get a quote →
                 </a>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Recurring Programs</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
@@ -447,7 +451,7 @@ function ContactPage() {
                   Get a quote →
                 </a>
               </div>
-              
+
               <div className="bg-card rounded-xl p-6 shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">Emergency Service</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
@@ -461,7 +465,7 @@ function ContactPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   );

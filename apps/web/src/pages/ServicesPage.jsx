@@ -67,16 +67,20 @@ function ServicesPage() {
       image: 'https://images.unsplash.com/photo-1682627100541-2ab451e70601'
     }
   ];
-  
+
   return (
     <>
       <Helmet>
         <title>Services - Barrel Man Logistics | Residential & Commercial Dumpster Rentals</title>
         <meta name="description" content="Comprehensive dumpster rental services for residential and commercial projects. Home cleanouts, construction sites, hauling services, and recurring programs in Virginia Beach." />
+        <link
+          rel="canonical"
+          href="https://barrelmandumpsters.com/about"
+        />
       </Helmet>
-      
+
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
@@ -86,7 +90,7 @@ function ServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h1 
+              <h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
@@ -98,7 +102,7 @@ function ServicesPage() {
             </motion.div>
           </div>
         </section>
-        
+
         {/* Services Grid */}
         <section className="py-24 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,15 +113,14 @@ function ServicesPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${
-                    index % 2 === 1 ? 'md:flex-row-reverse' : ''
-                  }`}
+                  className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''
+                    }`}
                 >
                   <div className={index % 2 === 1 ? 'md:order-2' : ''}>
                     <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                       <service.icon className="w-8 h-8 text-accent" />
                     </div>
-                    <h2 
+                    <h2
                       className="text-3xl md:text-4xl font-bold text-foreground mb-4"
                       style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
                     >
@@ -136,8 +139,8 @@ function ServicesPage() {
                     </ul>
                   </div>
                   <div className={index % 2 === 1 ? 'md:order-1' : ''}>
-                    <img 
-                      src={service.image} 
+                    <img
+                      src={service.image}
                       alt={service.title}
                       className="w-full h-[400px] object-cover object-center rounded-2xl shadow-lg"
                     />
@@ -147,11 +150,11 @@ function ServicesPage() {
             </div>
           </div>
         </section>
-        
+
         {/* CTA Section */}
         <section className="py-24 bg-muted">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 
+            <h2
               className="text-3xl md:text-4xl font-bold text-foreground mb-6"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
@@ -171,7 +174,7 @@ function ServicesPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   );
