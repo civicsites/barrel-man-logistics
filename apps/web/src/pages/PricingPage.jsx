@@ -18,8 +18,8 @@ function PricingPage() {
         '$80 per ton overage fee',
         '$20 per quarter ton overage',
         '$75 placement and retrieval fee',
-        'Flexible rental periods',
-        'Same-day service available'
+        'Rental period confirmed at booking',
+        'Same-day availability may be available — call or text to confirm'
       ],
       highlighted: true
     },
@@ -54,11 +54,14 @@ function PricingPage() {
   return (
     <>
       <Helmet>
-        <title>Pricing - Barrel Man Logistics | Transparent Dumpster Rental Rates</title>
-        <meta name="description" content="Clear, upfront pricing for dumpster rentals in Virginia Beach. Standard rentals from $450, monthly programs available. Veteran and first responder discounts." />
+        <title>Dumpster Rental Pricing Virginia Beach | Barrel Man Logistics</title>
+        <meta
+          name="description"
+          content="Dumpster rental pricing in Virginia Beach and Hampton Roads. View standard, 10-yard monthly, and 30-yard monthly rental options, included tonnage, overage rates, and service details."
+        />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/about"
+          href="https://barrelmandumpsters.com/pricing"
         />
       </Helmet>
 

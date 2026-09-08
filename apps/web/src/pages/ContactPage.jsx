@@ -109,11 +109,16 @@ function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Barrel Man Logistics | Get a Free Quote</title>
-        <meta name="description" content="Contact Barrel Man Logistics for a free dumpster rental quote. Call (757) 618-0273 or fill out our form. Serving Virginia Beach and Hampton Roads." />
+        <title>
+          Dumpster Rental Quote Virginia Beach | Barrel Man Logistics
+        </title>
+        <meta
+          name="description"
+          content="Contact Barrel Man Logistics for a dumpster rental quote in Virginia Beach and Hampton Roads. Call or text (757) 618-0273 for residential, commercial, construction, and cleanup projects."
+        />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/about"
+          href="https://barrelmandumpsters.com/contact"
         />
       </Helmet>
 
@@ -132,10 +137,10 @@ function ContactPage() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
-                Get a Free Quote
+                Get a Dumpster Rental Quote in Virginia Beach
               </h1>
               <p className="text-xl text-primary-foreground/90 leading-relaxed">
-                Contact us today to discuss your dumpster rental needs
+                Serving homeowners, contractors, property managers, and businesses throughout Virginia Beach and Hampton Roads.
               </p>
             </motion.div>
           </div>
@@ -159,7 +164,7 @@ function ContactPage() {
                   Request a Quote
                 </h2>
                 <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Fill out the form below and we'll get back to you within 24 hours with a customized quote for your project.
+                  Fill out the form below and we'll respond as soon as possible with a customized quote for your project. For same-day availability, call or text us directly at (757) 618-0273.
                 </p>
 
                 <form onSubmit={handleSubmit} noValidate className="space-y-6">
@@ -212,7 +217,7 @@ function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="mt-2 text-foreground bg-background"
-                      placeholder="(757) 555-0123"
+                      placeholder="(757) 618-0273"
                     />
                   </div>
 
@@ -318,12 +323,21 @@ function ContactPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">Phone</p>
+
                       <a
                         href="tel:7576180273"
                         className="text-lg text-accent hover:text-accent/80 transition-colors duration-200"
                       >
                         (757) 618-0273
                       </a>
+
+                      <a
+                        href="sms:7576180273"
+                        className="block mt-2 text-lg text-accent hover:text-accent/80 transition-colors duration-200"
+                      >
+                        Text Us: (757) 618-0273
+                      </a>
+
                       <p className="text-sm text-muted-foreground mt-1">
                         Monday - Saturday: 7am - 6pm
                       </p>

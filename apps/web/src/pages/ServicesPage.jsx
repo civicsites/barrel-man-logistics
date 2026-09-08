@@ -10,7 +10,8 @@ function ServicesPage() {
     {
       icon: Home,
       title: 'Residential Dumpster Rentals',
-      description: 'Perfect for homeowners tackling projects of any size. Our residential dumpster rentals make cleanup simple and stress-free.',
+      description:
+        'Dumpster rental service for homeowners throughout Virginia Beach and Hampton Roads for cleanouts, remodeling, roofing, moving projects, yard cleanup, and household junk removal.',
       features: [
         'Home cleanouts and decluttering',
         'Garage organization projects',
@@ -20,12 +21,13 @@ function ServicesPage() {
         'Remodeling and renovation debris',
         'Yard cleanup and landscaping waste'
       ],
-      image: 'https://images.unsplash.com/photo-1682627100541-2ab451e70601'
+      image: '...'
     },
     {
       icon: Building2,
-      title: 'Commercial Dumpster Rentals',
-      description: 'Reliable service for businesses, contractors, and property managers. We understand the demands of commercial projects and deliver accordingly.',
+      title: 'Commercial & Construction Dumpster Rentals',
+      description:
+        'Reliable dumpster rental service for contractors, construction sites, businesses, property managers, retail renovations, and ongoing commercial cleanup projects throughout Hampton Roads.',
       features: [
         'Construction sites and new builds',
         'Property management waste solutions',
@@ -39,8 +41,9 @@ function ServicesPage() {
     },
     {
       icon: Truck,
-      title: 'Hauling Services',
-      description: 'Professional hauling for construction debris, renovation waste, and project support. We handle the heavy lifting so you can focus on your work.',
+      title: 'Construction Debris Hauling & Cleanup',
+      description:
+        'Professional hauling and cleanup for construction debris, renovation waste, property cleanouts, landscaping debris, and project-specific removal throughout Virginia Beach and Hampton Roads.',
       features: [
         'Construction debris removal',
         'Renovation waste hauling',
@@ -53,8 +56,9 @@ function ServicesPage() {
     },
     {
       icon: Calendar,
-      title: 'Recurring Service Programs',
-      description: 'Customized programs designed for businesses with ongoing waste management needs. Daily, weekly, or custom schedules available.',
+      title: 'Recurring Dumpster Service for Businesses',
+      description:
+        'Recurring dumpster service for contractors, property managers, tree service companies, commercial facilities, and businesses throughout Virginia Beach and Hampton Roads.',
       features: [
         'Tree service company packages',
         'Contractor recurring programs',
@@ -71,11 +75,16 @@ function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>Services - Barrel Man Logistics | Residential & Commercial Dumpster Rentals</title>
-        <meta name="description" content="Comprehensive dumpster rental services for residential and commercial projects. Home cleanouts, construction sites, hauling services, and recurring programs in Virginia Beach." />
+        <title>
+          Dumpster Rental Services Virginia Beach | Barrel Man Logistics
+        </title>
+        <meta
+          name="description"
+          content="Residential, commercial, construction, hauling, and recurring dumpster rental services in Virginia Beach and Hampton Roads. Serving homeowners, contractors, property managers, and businesses."
+        />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/about"
+          href="https://barrelmandumpsters.com/services"
         />
       </Helmet>
 
@@ -94,10 +103,10 @@ function ServicesPage() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
-                Our Services
+                Dumpster Rental Services in Virginia Beach & Hampton Roads
               </h1>
               <p className="text-xl text-primary-foreground/90 leading-relaxed">
-                Comprehensive dumpster rental solutions for every project type and size
+                Residential, commercial, construction, hauling, and recurring dumpster service for homeowners, contractors, property managers, and businesses throughout Hampton Roads.
               </p>
             </motion.div>
           </div>

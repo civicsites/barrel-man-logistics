@@ -21,27 +21,27 @@ function FAQPage() {
       answer: 'Yes, we understand that project needs don\'t always follow a 9-to-5 schedule. We offer emergency and after-hours service by arrangement. Call us at (757) 618-0273 to discuss your urgent needs and we\'ll work with you to find a solution.'
     },
     {
-      question: 'How long can I keep my dumpster?',
+      question: 'How long can I keep my dumpste rental?',
       answer: 'Rental periods vary based on your project needs. Standard rentals typically include a reasonable timeframe, and we can arrange extended rentals for longer projects. Contact us to discuss your specific timeline and we\'ll create a rental schedule that works for you.'
     },
     {
-      question: 'What areas do you serve?',
+      question: 'What areas do you serve in Hampton Roads?',
       answer: 'We serve Virginia Beach and all surrounding Hampton Roads communities, including Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, and Newport News. If you\'re unsure whether we service your area, give us a call and we\'ll let you know.'
     },
     {
-      question: 'What can I put in the dumpster?',
+      question: 'What can I put a dumpster?',
       answer: 'You can dispose of most household junk, construction debris, renovation waste, yard waste, and general trash. However, we cannot accept paint, tires, dirt, concrete, rocks, hazardous materials, toxic materials, flammable materials, or appliances containing freon. See our Rules page for a complete list of prohibited items.'
     },
     {
-      question: 'How do I know which dumpster size I need?',
+      question: 'What size dumpster do I need?',
       answer: 'We offer 10-yard dumpsters for smaller projects like garage cleanouts and small renovations, and 30-yard dumpsters for major renovations and construction projects. If you\'re unsure, call us at (757) 618-0273 and we\'ll help you choose the right size based on your project details.'
     },
     {
-      question: 'What happens if I exceed the weight limit?',
+      question: 'What happens if I exceed the dumpsterweight limit?',
       answer: 'Our standard rental includes up to 2 tons of waste. If you exceed this limit, overage fees apply: $80 per ton or $20 per quarter ton. We\'ll weigh your load and notify you of any overage charges before final billing.'
     },
     {
-      question: 'Do you offer recurring service for businesses?',
+      question: 'Do you offer recurring dumpster service for businesses?',
       answer: 'Yes! We offer flexible recurring service programs with daily, weekly, or custom schedules. These programs are perfect for tree service companies, contractors, commercial facilities, and property management companies. Pricing starts at $120+ per dump depending on your needs.'
     },
     {
@@ -49,19 +49,26 @@ function FAQPage() {
       answer: 'Yes, we are a certified Service-Disabled Veteran-Owned Small Business (SDVOSB), which qualifies us for government contracts and Virginia SWaM (Small, Women-owned, and Minority-owned) business programs. We\'re ready to support your procurement needs.'
     },
     {
-      question: 'How quickly can you deliver a dumpster?',
+      question: 'Do you offer same-day dumpster delivery?',
       answer: 'We offer same-day service when available. Contact us as early as possible and we\'ll work to accommodate your timeline. For guaranteed delivery on a specific date, we recommend booking in advance.'
-    }
+    },
+    {
+      question: 'How much does a dumpster rental cost in Virginia Beach?',
+      answer:
+        'Dumpster rental pricing depends on the service option, dumpster size, rental period, included weight, and any applicable overage or placement fees. See our Pricing page for current rates or contact Barrel Man Logistics for a quote.'
+    },
   ];
 
   return (
     <>
       <Helmet>
-        <title>FAQ - Barrel Man Logistics | Dumpster Rental Questions Answered</title>
+        <title>
+          Dumpster Rental FAQ Virginia Beach | Barrel Man Logistics
+        </title>
         <meta name="description" content="Frequently asked questions about dumpster rentals in Virginia Beach. Learn about pricing, discounts, service areas, rental periods, and what you can dispose of." />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/about"
+          href="https://barrelmandumpsters.com/faq"
         />
       </Helmet>
 
@@ -80,10 +87,10 @@ function FAQPage() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
-                Frequently Asked Questions
+                Dumpster Rental FAQs for Virginia Beach & Hampton Roads
               </h1>
               <p className="text-xl text-primary-foreground/90 leading-relaxed">
-                Find answers to common questions about our dumpster rental services
+                Get answers about dumpster sizes, rental periods, delivery, prohibited items, service areas, pricing, and recurring dumpster service.
               </p>
             </motion.div>
           </div>

@@ -13,22 +13,26 @@ function HomePage() {
     {
       icon: Users,
       title: 'Residential Dumpster Rentals',
-      description: 'Perfect for home cleanouts, garage organization, estate cleanups, moving projects, roofing, remodeling, and yard cleanup.'
+      description:
+        '10-yard and 30-yard dumpster rentals for home cleanouts, remodeling, roofing, yard debris, moving projects, and household junk removal.'
     },
     {
       icon: Truck,
-      title: 'Commercial Dumpster Rentals',
-      description: 'Reliable service for construction sites, property managers, retail renovations, office cleanouts, contractor projects, and business relocations.'
+      title: 'Commercial & Construction Dumpster Rentals',
+      description:
+        'Reliable dumpster service for contractors, construction sites, property managers, commercial renovations, and ongoing debris removal.'
     },
     {
       icon: Shield,
-      title: 'Hauling Services',
-      description: 'Professional hauling for construction debris, renovation waste, and comprehensive project support.'
+      title: 'Debris Hauling & Cleanup',
+      description:
+        'Professional hauling for construction debris, renovation waste, property cleanups, landscaping debris, and project-specific removal needs.'
     },
     {
       icon: DollarSign,
-      title: 'Recurring Service Programs',
-      description: 'Flexible daily, weekly, or custom packages designed for tree service companies, contractors, commercial facilities, and property management.'
+      title: 'Recurring Dumpster Service',
+      description:
+        'Flexible recurring dumpster service for contractors, property managers, businesses, tree service companies, and commercial facilities.'
     }
   ];
 
@@ -53,14 +57,20 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Barrel Man Logistics - Reliable Dumpster Rentals in Virginia Beach & Hampton Roads</title>
-        <meta name="description" content="Veteran-owned dumpster rental company serving Virginia Beach and Hampton Roads. Residential and commercial dumpster rentals with reliable service and transparent pricing." />
+        <title>
+          Dumpster Rental Virginia Beach & Hampton Roads | Barrel Man Logistics
+        </title>
+
+        <meta
+          name="description"
+          content="10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads for home cleanouts, remodeling, roofing, construction, property maintenance, and commercial projects. Call or text Barrel Man Logistics for availability."
+        />
+
         <link
           rel="canonical"
           href="https://barrelmandumpsters.com/"
         />
       </Helmet>
-
       <Header />
 
       <main>
@@ -93,21 +103,29 @@ function HomePage() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
-                Reliable Dumpster Rentals From A Veteran-Owned Company You Can Trust
+                Dumpster Rental in Virginia Beach & Hampton Roads
               </h1>
 
               <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 max-w-3xl mx-auto leading-relaxed">
-                Serving Virginia Beach and Hampton Roads
+                10-yard and 30-yard dumpster rentals for home cleanouts, remodeling, roofing, construction, and commercial projects throughout Virginia Beach and Hampton Roads.
               </p>
 
               <p className="text-lg text-primary-foreground/80 mb-12 max-w-2xl mx-auto leading-relaxed">
-                Professional dumpster rental services for residential and commercial projects. Fast delivery, transparent pricing, and dependable service from a Service-Disabled Veteran-Owned Small Business.
+                Fast dumpster delivery, straightforward pricing, and dependable pickup throughout Virginia Beach and Hampton Roads. Call or text (757) 618-0273 for availability.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link to="/contact" className="btn-primary text-lg px-8 py-4">
                   Request a Quote
                 </Link>
+
+                <a
+                  href="sms:7576180273"
+                  className="btn-secondary text-lg px-8 py-4 inline-flex items-center gap-2"
+                >
+                  Text Us
+                </a>
+
                 <a
                   href="tel:7576180273"
                   className="btn-secondary text-lg px-8 py-4 inline-flex items-center gap-2"
@@ -128,10 +146,10 @@ function HomePage() {
                 className="text-3xl md:text-4xl font-bold text-foreground mb-4"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
-                Our Services
+                Dumpster Rental Services in Virginia Beach & Hampton Roads
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Comprehensive dumpster rental solutions for every project size and type
+                Residential and commercial dumpster rentals for cleanouts, remodeling, roofing, construction, property maintenance, and debris removal throughout Virginia Beach and Hampton Roads.
               </p>
             </div>
 
@@ -170,7 +188,11 @@ function HomePage() {
                 Why Choose Barrel Man Logistics
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Built on service. Driven by reliability.
+                Veteran-Owned. Local. Built for Hampton Roads.
+              </p>
+
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-4 leading-relaxed">
+                Serving homeowners, contractors, property managers, and businesses across Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, and Newport News.
               </p>
             </div>
 
@@ -220,7 +242,7 @@ function HomePage() {
             </div>
           </div>
         </section>
-      </main>
+      </main >
 
       <Footer />
     </>

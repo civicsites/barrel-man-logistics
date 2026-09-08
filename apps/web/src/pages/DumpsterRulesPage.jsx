@@ -48,11 +48,16 @@ function DumpsterRulesPage() {
   return (
     <>
       <Helmet>
-        <title>Dumpster Rules - Barrel Man Logistics | Prohibited Items & Guidelines</title>
-        <meta name="description" content="Important dumpster rental rules and prohibited items. Learn what you cannot dispose of in our dumpsters including paint, tires, hazardous materials, and appliances with freon." />
+        <title>
+          Dumpster Rules Virginia Beach | Prohibited Items & Guidelines
+        </title>
+        <meta
+          name="description"
+          content="Dumpster rental rules for Virginia Beach and Hampton Roads. Learn what can and cannot go in a dumpster, including paint, tires, concrete, hazardous materials, and other prohibited items."
+        />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/about"
+          href="https://barrelmandumpsters.com/rules"
         />
       </Helmet>
 
@@ -71,10 +76,10 @@ function DumpsterRulesPage() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
-                Dumpster Rules & Guidelines
+                Dumpster Rental Rules in Virginia Beach & Hampton Roads
               </h1>
               <p className="text-xl text-primary-foreground/90 leading-relaxed">
-                Important information about what you can and cannot dispose of
+                Know what can and cannot go in your dumpster before delivery. Review prohibited items, disposal restrictions, and important rental guidelines.
               </p>
             </motion.div>
           </div>
@@ -132,15 +137,19 @@ function DumpsterRulesPage() {
           </div>
         </section>
 
-        {/* Acceptable Items */}
+        {/* Allowed Items */}
         <section className="py-24 bg-muted">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2
               className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center"
               style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
             >
-              What You Can Dispose Of
+              What You Can Put in Our Dumpsters
             </h2>
+            
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-10 leading-relaxed">
+              Our dumpsters are suitable for many common residential, remodeling, cleanup, and construction materials throughout Virginia Beach and Hampton Roads. If you are unsure about a specific item, contact Barrel Man Logistics before loading it.
+            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-card rounded-xl p-6 shadow-sm">

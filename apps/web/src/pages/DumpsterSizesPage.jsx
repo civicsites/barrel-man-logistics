@@ -9,9 +9,9 @@ function DumpsterSizesPage() {
   const sizes = [
     {
       icon: Package,
-      size: '10 Yard',
+      size: '10 Yard Dumpster Rental',
       dimensions: '12ft L × 8ft W × 3.5ft H',
-      capacity: 'Holds approximately 4 pickup truck loads',
+      capacity: 'Approximate capacity: 4 pickup truck loads',
       idealFor: [
         'Garage cleanouts',
         'Small remodeling projects',
@@ -28,9 +28,9 @@ function DumpsterSizesPage() {
     },
     {
       icon: Warehouse,
-      size: '30 Yard',
+      size: '30 Yard Dumpster Rental',
       dimensions: '22ft L × 8ft W × 6ft H',
-      capacity: 'Holds approximately 12 pickup truck loads',
+      capacity: 'Approximate capacity: 12 pickup truck loads',
       idealFor: [
         'Major home renovations',
         'Commercial construction projects',
@@ -50,11 +50,16 @@ function DumpsterSizesPage() {
   return (
     <>
       <Helmet>
-        <title>Dumpster Sizes - Barrel Man Logistics | 10 & 30 Yard Dumpsters</title>
-        <meta name="description" content="Choose the right dumpster size for your project. 10 yard dumpsters for small projects, 30 yard dumpsters for major renovations and construction in Virginia Beach." />
+        <title>
+          10 & 30 Yard Dumpster Rentals Virginia Beach | Barrel Man Logistics
+        </title>
+        <meta
+          name="description"
+          content="Compare 10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads. Find the right dumpster size for cleanouts, remodeling, roofing, construction, and commercial projects."
+        />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/about"
+          href="https://barrelmandumpsters.com/dumpster-sizes"
         />
       </Helmet>
 
@@ -73,10 +78,10 @@ function DumpsterSizesPage() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
-                Dumpster Sizes
+                10 & 30 Yard Dumpster Rentals in Virginia Beach
               </h1>
               <p className="text-xl text-primary-foreground/90 leading-relaxed">
-                Choose the right size for your project
+                Compare our 10-yard and 30-yard dumpster options for home cleanouts, remodeling, roofing, construction, and commercial projects throughout Hampton Roads.
               </p>
             </motion.div>
           </div>

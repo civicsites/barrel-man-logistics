@@ -11,52 +11,54 @@ function ServiceAreaPage() {
     {
       city: 'Virginia Beach',
       description:
-        'Dumpster rental in Virginia Beach, Virginia for home cleanouts, renovations, construction projects, roofing jobs, landscaping debris, and commercial work.'
+        'Dumpster rental in Virginia Beach for home cleanouts, remodeling, roofing, construction, property maintenance, moving projects, and commercial cleanup.'
     },
     {
       city: 'Norfolk',
       description:
-        'Reliable dumpster rental in Norfolk, Virginia for residential cleanouts, remodeling projects, construction debris, commercial jobs, and property cleanups.'
+        'Dumpster rental service in Norfolk for residential cleanouts, renovation debris, contractor projects, property management needs, and commercial work.'
     },
     {
       city: 'Chesapeake',
       description:
-        'Dependable dumpster rental in Chesapeake, Virginia with convenient delivery and pickup for home projects, renovations, construction sites, and commercial properties.'
+        'Serving Chesapeake with dumpster rentals for home renovations, roofing, yard cleanup, construction projects, property maintenance, and business cleanup.'
     },
     {
       city: 'Portsmouth',
       description:
-        'Professional dumpster rental in Portsmouth, Virginia for homeowners, contractors, businesses, renovation projects, construction debris, and property cleanouts.'
+        'Dumpster rental in Portsmouth for household cleanouts, remodeling, construction debris, rental-property cleanup, roofing, and commercial projects.'
     },
     {
       city: 'Suffolk',
       description:
-        'Dumpster rental in Suffolk, Virginia for residential cleanouts, remodeling projects, construction work, commercial properties, landscaping debris, and more.'
+        'Dumpster rental service in Suffolk for homeowners, contractors, property managers, roofing projects, renovations, cleanouts, and commercial jobs.'
     },
     {
       city: 'Hampton',
       description:
-        'Reliable dumpster rental in Hampton, Virginia for home cleanouts, renovations, construction projects, commercial jobs, and property improvement work.'
+        'Serving Hampton with dumpster rentals for residential cleanup, remodeling, construction debris, roofing, property maintenance, and business projects.'
     },
     {
       city: 'Newport News',
       description:
-        'Professional dumpster rental in Newport News, Virginia with flexible service for residential projects, renovations, construction debris, commercial work, and cleanouts.'
+        'Dumpster rental in Newport News for home cleanouts, renovations, construction work, roofing debris, property management, and commercial cleanup.'
     },
     {
       city: 'Surrounding Hampton Roads Communities',
       description:
-        'Barrel Man Logistics also serves surrounding communities throughout Hampton Roads. Contact us to confirm dumpster rental availability for your location.'
+        'Barrel Man Logistics also serves surrounding communities throughout Hampton Roads. Contact us to confirm dumpster availability in your area.'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Service Area - Barrel Man Logistics | Virginia Beach & Hampton Roads</title>
+        <title>
+          Dumpster Rental Service Area | Virginia Beach, Norfolk, Chesapeake & Hampton Roads
+        </title>
         <meta
           name="description"
-          content="Barrel Man Logistics serves Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and surrounding Hampton Roads communities."
+          content="Barrel Man Logistics provides dumpster rental service throughout Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and surrounding Hampton Roads communities."
         />
         <link
           rel="canonical"
@@ -99,7 +101,7 @@ function ServiceAreaPage() {
                   className="text-3xl md:text-4xl font-bold text-foreground mb-6"
                   style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
                 >
-                  Serving Hampton Roads with Pride
+                  Dumpster Rental Service Throughout Hampton Roads
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                   As a locally-owned and operated business based in Virginia Beach, we're proud to serve our neighbors throughout Hampton Roads. Our Service-Disabled Veteran-Owned Small Business brings military precision and reliability to every dumpster rental.
@@ -160,6 +162,64 @@ function ServiceAreaPage() {
                   </p>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+        {/* Neighborhoods We Serve */}
+        <section className="py-24 bg-muted">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                Neighborhoods We Serve Across Hampton Roads
+              </h2>
+
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Barrel Man Logistics provides dumpster rental service throughout neighborhoods and communities across Virginia Beach, Chesapeake, Norfolk, Portsmouth, Suffolk, Hampton, and Newport News.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold mb-3">Virginia Beach</h3>
+                <p className="text-muted-foreground">
+                  Kempsville, Town Center, Oceanfront, Sandbridge, Great Neck, Pungo, and surrounding Virginia Beach communities.
+                </p>
+              </div>
+
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold mb-3">Chesapeake</h3>
+                <p className="text-muted-foreground">
+                  Greenbrier, Great Bridge, Hickory, Deep Creek, Western Branch, and surrounding Chesapeake communities.
+                </p>
+              </div>
+
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold mb-3">Norfolk</h3>
+                <p className="text-muted-foreground">
+                  Ghent, Ocean View, Downtown Norfolk, Larchmont, and surrounding Norfolk neighborhoods.
+                </p>
+              </div>
+
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold mb-3">Portsmouth</h3>
+                <p className="text-muted-foreground">
+                  Churchland, Olde Towne, Cradock, and surrounding Portsmouth communities.
+                </p>
+              </div>
+
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold mb-3">Suffolk</h3>
+                <p className="text-muted-foreground">
+                  Harbour View, North Suffolk, Downtown Suffolk, and surrounding Suffolk communities.
+                </p>
+              </div>
+
+              <div className="bg-background rounded-xl p-6 shadow-sm">
+                <h3 className="text-xl font-bold mb-3">Hampton & Newport News</h3>
+                <p className="text-muted-foreground">
+                  Phoebus, Coliseum Central, Denbigh, Hilton Village, and surrounding Peninsula communities.
+                </p>
+              </div>
             </div>
           </div>
         </section>

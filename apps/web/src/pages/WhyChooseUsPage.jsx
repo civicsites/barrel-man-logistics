@@ -30,18 +30,21 @@ function WhyChooseUsPage() {
     },
     {
       number: '05',
-      title: 'Government & SWaM Opportunities',
-      description: 'Our SDVOSB certification qualifies us for government contracts and Virginia SWaM (Small, Women-owned, and Minority-owned) business programs. We are ready to support your procurement needs.'
+      title: 'Veteran-Owned Business Qualifications',
+      description:
+        'Barrel Man Logistics is a Service-Disabled Veteran-Owned Small Business. Government and supplier opportunities depend on the specific contracting and certification requirements of each agency or program.',
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Why Choose Us - Barrel Man Logistics | Veteran-Owned Dumpster Rental</title>
+        <title>
+          Why Choose Barrel Man Logistics | Dumpster Rental Virginia Beach
+        </title>
         <meta
           name="description"
-          content="Discover why businesses and homeowners choose Barrel Man Logistics for reliable dumpster rentals, transparent pricing, and veteran-owned service."
+          content="Why choose Barrel Man Logistics for dumpster rental in Virginia Beach and Hampton Roads. Veteran-owned service, reliable delivery, residential and commercial rentals, and straightforward customer support."
         />
         <link
           rel="canonical"
@@ -64,10 +67,10 @@ function WhyChooseUsPage() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                 style={{ letterSpacing: '-0.02em', textWrap: 'balance' }}
               >
-                Why Choose Barrel Man Logistics
+                Why Choose Barrel Man Logistics for Dumpster Rental in Virginia Beach
               </h1>
               <p className="text-xl text-primary-foreground/90 leading-relaxed">
-                Military values meet civilian service excellence
+                Veteran-owned dumpster rental service built around reliable delivery, clear communication, and local service throughout Hampton Roads.
               </p>
             </motion.div>
           </div>
