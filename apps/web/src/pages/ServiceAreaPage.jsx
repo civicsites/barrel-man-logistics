@@ -11,7 +11,7 @@ function ServiceAreaPage() {
     {
       city: 'Virginia Beach',
       description:
-        'Dumpster rental in Virginia Beach for home cleanouts, remodeling, roofing, construction, property maintenance, moving projects, and commercial cleanup.'
+        'Dumpster rental in Virginia Beach, including Sandbridge and Dam Neck, for home cleanouts, remodeling, roofing, construction, property maintenance, and commercial projects.',
     },
     {
       city: 'Norfolk',
@@ -44,10 +44,20 @@ function ServiceAreaPage() {
         'Dumpster rental in Newport News for home cleanouts, renovations, construction work, roofing debris, property management, and commercial cleanup.'
     },
     {
+      city: 'Williamsburg',
+      description:
+        'Dumpster rental service in Williamsburg for residential cleanouts, renovations, roofing projects, construction debris, property maintenance, and commercial jobs.',
+    },
+    {
+      city: 'Poquoson',
+      description:
+        'Serving Poquoson with reliable dumpster rentals for home cleanouts, remodeling, roofing debris, construction projects, yard cleanup, and property maintenance.',
+    },
+    {
       city: 'Surrounding Hampton Roads Communities',
       description:
         'Barrel Man Logistics also serves surrounding communities throughout Hampton Roads. Contact us to confirm dumpster availability in your area.'
-    }
+    },
   ];
 
   return (
