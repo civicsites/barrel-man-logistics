@@ -17,7 +17,7 @@ function PricingPage() {
         'Includes up to 2 tons of waste',
         '$80 per ton overage fee',
         '$20 per quarter ton overage',
-        '$75 placement and retrieval fee',
+        '$75 relocation fee when moved to a new job site',
         'Rental period confirmed at booking',
         'Same-day availability may be available — call or text to confirm'
       ],
