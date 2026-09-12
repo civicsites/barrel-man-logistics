@@ -8,6 +8,11 @@
       "source": "/\\.\\.\\.",
       "destination": "/services",
       "permanent": true
+    },
+    {
+      "source": "/sizes",
+      "destination": "/dumpster-sizes",
+      "permanent": true
     }
   ],
   "rewrites": [

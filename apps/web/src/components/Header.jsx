@@ -12,7 +12,7 @@ function Header() {
     { path: '/about', label: 'About' },
     { path: '/why-choose-us', label: 'Why Choose Us' },
     { path: '/services', label: 'Services' },
-    { path: '/sizes', label: 'Dumpster Sizes' },
+    { path: '/dumpster-sizes', label: 'Dumpster Sizes' },
     { path: '/pricing', label: 'Pricing' },
     { path: '/faq', label: 'FAQ' },
     { path: '/rules', label: 'Rules' },
