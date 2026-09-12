@@ -21,7 +21,7 @@ function ServicesPage() {
         'Remodeling and renovation debris',
         'Yard cleanup and landscaping waste'
       ],
-      image: '...'
+      image: '/images/hero.jpg'
     },
     {
       icon: Building2,
