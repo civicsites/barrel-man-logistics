@@ -57,7 +57,7 @@ function DumpsterRulesPage() {
         />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/rules"
+          href="https://www.barrelmandumpsters.com/rules"
         />
       </Helmet>
 

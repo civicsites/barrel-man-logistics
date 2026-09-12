@@ -68,7 +68,7 @@ function FAQPage() {
         <meta name="description" content="Frequently asked questions about dumpster rentals in Virginia Beach. Learn about pricing, discounts, service areas, rental periods, and what you can dispose of." />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/faq"
+          href="https://www.barrelmandumpsters.com/faq"
         />
       </Helmet>
 

@@ -16,7 +16,7 @@ function AboutPage() {
         />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/about"
+          href="https://www.barrelmandumpsters.com/about"
         />
       </Helmet>
 

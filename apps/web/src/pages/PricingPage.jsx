@@ -61,7 +61,7 @@ function PricingPage() {
         />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/pricing"
+          href="https://www.barrelmandumpsters.com/pricing"
         />
       </Helmet>
 

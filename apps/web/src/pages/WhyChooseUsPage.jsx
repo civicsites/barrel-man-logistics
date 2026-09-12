@@ -48,7 +48,7 @@ function WhyChooseUsPage() {
         />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/why-choose-us"
+          href="https://www.barrelmandumpsters.com/why-choose-us"
         />
       </Helmet>
 

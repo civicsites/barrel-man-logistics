@@ -72,7 +72,7 @@ function ServiceAreaPage() {
         />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/service-area"
+          href="https://www.barrelmandumpsters.com/service-area"
         />
       </Helmet>
 

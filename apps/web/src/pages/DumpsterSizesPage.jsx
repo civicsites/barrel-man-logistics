@@ -11,13 +11,13 @@ function DumpsterSizesPage() {
       icon: Package,
       size: '10 Yard Dumpster Rental',
       dimensions: '12ft L × 8ft W × 3.5ft H',
-      capacity: 'Approximate capacity: 4 pickup truck loads',
+      capacity: 'Approximate capacity: 4 pickup truck loads of debris',
       idealFor: [
-        'Garage cleanouts',
+        'Garage and household cleanouts',
         'Small remodeling projects',
-        'Roofing projects (up to 1,500 sq ft)',
+        'Roofing projects up to about 1,500 sq ft',
         'Household junk removal',
-        'Basement or attic cleanouts',
+        'Basement and attic cleanouts',
         'Small landscaping projects'
       ],
       notRecommended: [
@@ -30,7 +30,7 @@ function DumpsterSizesPage() {
       icon: Warehouse,
       size: '30 Yard Dumpster Rental',
       dimensions: '22ft L × 8ft W × 6ft H',
-      capacity: 'Approximate capacity: 12 pickup truck loads',
+      capacity: 'Approximate capacity: 12 pickup truck loads of debris',
       idealFor: [
         'Major home renovations',
         'Commercial construction projects',
@@ -59,7 +59,7 @@ function DumpsterSizesPage() {
         />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/dumpster-sizes"
+          href="https://www.barrelmandumpsters.com/dumpster-sizes"
         />
       </Helmet>
 

@@ -68,7 +68,7 @@ function HomePage() {
 
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/"
+          href="https://www.barrelmandumpsters.com/"
         />
       </Helmet>
       <Header />

@@ -84,7 +84,7 @@ function ServicesPage() {
         />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/services"
+          href="https://www.barrelmandumpsters.com/services"
         />
       </Helmet>
 

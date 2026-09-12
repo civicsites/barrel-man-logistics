@@ -118,7 +118,7 @@ function ContactPage() {
         />
         <link
           rel="canonical"
-          href="https://barrelmandumpsters.com/contact"
+          href="https://www.barrelmandumpsters.com/contact"
         />
       </Helmet>
 
