@@ -114,7 +114,7 @@ function ContactPage() {
         </title>
         <meta
           name="description"
-          content="Contact Barrel Man Logistics for a dumpster rental quote in Virginia Beach and Hampton Roads. Call or text (757) 618-0273 for residential, commercial, construction, and cleanup projects."
+          content="Request a dumpster rental quote in Virginia Beach or Hampton Roads. Call or text Barrel Man Logistics at (757) 618-0273 today for your project."
         />
         <link
           rel="canonical"

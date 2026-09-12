@@ -53,7 +53,7 @@ function DumpsterRulesPage() {
         </title>
         <meta
           name="description"
-          content="Dumpster rental rules for Virginia Beach and Hampton Roads. Learn what can and cannot go in a dumpster, including paint, tires, concrete, hazardous materials, and other prohibited items."
+          content="Review dumpster rental rules for Virginia Beach and Hampton Roads, including prohibited materials, loading limits, and safe-use guidelines today."
         />
         <link
           rel="canonical"
@@ -146,7 +146,7 @@ function DumpsterRulesPage() {
             >
               What You Can Put in Our Dumpsters
             </h2>
-            
+
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-10 leading-relaxed">
               Our dumpsters are suitable for many common residential, remodeling, cleanup, and construction materials throughout Virginia Beach and Hampton Roads. If you are unsure about a specific item, contact Barrel Man Logistics before loading it.
             </p>

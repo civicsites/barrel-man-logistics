@@ -55,7 +55,7 @@ function DumpsterSizesPage() {
         </title>
         <meta
           name="description"
-          content="Compare 10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads. Find the right dumpster size for cleanouts, remodeling, roofing, construction, and commercial projects."
+          content="Compare 10-yard and 30-yard dumpster sizes for cleanouts, remodeling, roofing, construction, and commercial projects in Hampton Roads today."
         />
         <link
           rel="canonical"

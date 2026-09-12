@@ -80,7 +80,7 @@ function ServicesPage() {
         </title>
         <meta
           name="description"
-          content="Residential, commercial, construction, hauling, and recurring dumpster rental services in Virginia Beach and Hampton Roads. Serving homeowners, contractors, property managers, and businesses."
+          content="Residential, commercial, construction, hauling, and recurring dumpster rental services throughout Virginia Beach and Hampton Roads. Call us today."
         />
         <link
           rel="canonical"

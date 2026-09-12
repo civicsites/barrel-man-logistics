@@ -44,7 +44,7 @@ function WhyChooseUsPage() {
         </title>
         <meta
           name="description"
-          content="Why choose Barrel Man Logistics for dumpster rental in Virginia Beach and Hampton Roads. Veteran-owned service, reliable delivery, residential and commercial rentals, and straightforward customer support."
+          content="Choose veteran-owned Barrel Man Logistics for dependable dumpster rentals and straightforward service across Virginia Beach and Hampton Roads."
         />
         <link
           rel="canonical"

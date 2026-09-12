@@ -68,7 +68,7 @@ function ServiceAreaPage() {
         </title>
         <meta
           name="description"
-          content="Barrel Man Logistics provides dumpster rental service throughout Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and surrounding Hampton Roads communities."
+          content="Dumpster rental service across Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and Hampton Roads communities."
         />
         <link
           rel="canonical"

@@ -57,7 +57,7 @@ function PricingPage() {
         <title>Dumpster Rental Pricing Virginia Beach | Barrel Man Logistics</title>
         <meta
           name="description"
-          content="Dumpster rental pricing in Virginia Beach and Hampton Roads. View standard, 10-yard monthly, and 30-yard monthly rental options, included tonnage, overage rates, and service details."
+          content="View transparent pricing for 10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads, including monthly rental options today."
         />
         <link
           rel="canonical"

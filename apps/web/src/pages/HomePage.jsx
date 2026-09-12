@@ -63,7 +63,7 @@ function HomePage() {
 
         <meta
           name="description"
-          content="10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads for home cleanouts, remodeling, roofing, construction, property maintenance, and commercial projects. Call or text Barrel Man Logistics for availability."
+          content="10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads. Call Barrel Man Logistics for residential, commercial, and construction service."
         />
 
         <link

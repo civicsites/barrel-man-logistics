@@ -12,7 +12,7 @@ function AboutPage() {
         <title>About Barrel Man Logistics | Veteran-Owned Dumpster Rental Virginia Beach</title>
         <meta
           name="description"
-          content="Learn about Barrel Man Logistics, a veteran-owned dumpster rental company serving Virginia Beach and Hampton Roads with residential, commercial, construction, and cleanup services."
+          content="Learn about veteran-owned Barrel Man Logistics, providing dependable dumpster rentals throughout Virginia Beach and Hampton Roads. Contact us today."
         />
         <link
           rel="canonical"
