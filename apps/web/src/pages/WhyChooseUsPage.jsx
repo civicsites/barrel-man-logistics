@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageSeo from '@/components/PageSeo.jsx';
 import { motion } from 'framer-motion';
 import { Award, Clock, Building2, DollarSign, FileCheck } from 'lucide-react';
 import Header from '@/components/Header.jsx';
@@ -38,19 +38,11 @@ function WhyChooseUsPage() {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Why Choose Barrel Man Logistics | Dumpster Rental Virginia Beach
-        </title>
-        <meta
-          name="description"
-          content="Choose veteran-owned Barrel Man Logistics for dependable dumpster rentals and straightforward service across Virginia Beach and Hampton Roads."
-        />
-        <link
-          rel="canonical"
-          href="https://www.barrelmandumpsters.com/why-choose-us"
-        />
-      </Helmet>
+      <PageSeo
+        title="Why Choose Barrel Man Logistics | Dumpster Rental Virginia Beach"
+        description="Choose veteran-owned Barrel Man Logistics for dependable dumpster rentals and straightforward service across Virginia Beach and Hampton Roads."
+        canonical="https://www.barrelmandumpsters.com/why-choose-us"
+      />
 
       <Header />
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageSeo from '@/components/PageSeo.jsx';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Phone, ArrowRight, Truck, Users, Shield, DollarSign } from 'lucide-react';
@@ -56,21 +56,11 @@ function HomePage() {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Dumpster Rental Virginia Beach & Hampton Roads | Barrel Man Logistics
-        </title>
-
-        <meta
-          name="description"
-          content="10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads. Call Barrel Man Logistics for residential, commercial, and construction service."
-        />
-
-        <link
-          rel="canonical"
-          href="https://www.barrelmandumpsters.com/"
-        />
-      </Helmet>
+      <PageSeo
+        title="Dumpster Rental Virginia Beach & Hampton Roads | Barrel Man Logistics"
+        description="10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads. Call Barrel Man Logistics for residential, commercial, and construction service."
+        canonical="https://www.barrelmandumpsters.com/"
+      />
       <Header />
 
       <main>

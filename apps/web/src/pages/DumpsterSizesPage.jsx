@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageSeo from '@/components/PageSeo.jsx';
 import { motion } from 'framer-motion';
 import { Package, Warehouse, Phone } from 'lucide-react';
 import Header from '@/components/Header.jsx';
@@ -49,19 +49,11 @@ function DumpsterSizesPage() {
 
   return (
     <>
-      <Helmet>
-        <title>
-          10 & 30 Yard Dumpster Rentals Virginia Beach | Barrel Man Logistics
-        </title>
-        <meta
-          name="description"
-          content="Compare 10-yard and 30-yard dumpster sizes for cleanouts, remodeling, roofing, construction, and commercial projects in Hampton Roads today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.barrelmandumpsters.com/dumpster-sizes"
-        />
-      </Helmet>
+      <PageSeo
+        title="10 & 30 Yard Dumpster Rentals Virginia Beach | Barrel Man Logistics"
+        description="Compare 10-yard and 30-yard dumpster sizes for cleanouts, remodeling, roofing, construction, and commercial projects in Hampton Roads today."
+        canonical="https://www.barrelmandumpsters.com/dumpster-sizes"
+      />
 
       <Header />
 

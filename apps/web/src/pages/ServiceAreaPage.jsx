@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageSeo from '@/components/PageSeo.jsx';
 import { motion } from 'framer-motion';
 import { MapPin, Phone } from 'lucide-react';
 import Header from '@/components/Header.jsx';
@@ -62,17 +62,11 @@ function ServiceAreaPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Dumpster Rental Service Area | Hampton Roads VA</title>
-        <meta
-          name="description"
-          content="Dumpster rental service across Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and Hampton Roads communities."
-        />
-        <link
-          rel="canonical"
-          href="https://www.barrelmandumpsters.com/service-area"
-        />
-      </Helmet>
+      <PageSeo
+        title="Dumpster Rental Service Area | Hampton Roads VA"
+        description="Dumpster rental service across Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and Hampton Roads communities."
+        canonical="https://www.barrelmandumpsters.com/service-area"
+      />
 
       <main>
         {/* Hero Section */}

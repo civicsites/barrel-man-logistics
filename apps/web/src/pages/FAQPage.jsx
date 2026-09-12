@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageSeo from '@/components/PageSeo.jsx';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
@@ -61,16 +61,11 @@ function FAQPage() {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Dumpster Rental FAQ Virginia Beach | Barrel Man Logistics
-        </title>
-        <meta name="description" content="Frequently asked questions about dumpster rentals in Virginia Beach. Learn about pricing, discounts, service areas, rental periods, and what you can dispose of." />
-        <link
-          rel="canonical"
-          href="https://www.barrelmandumpsters.com/faq"
-        />
-      </Helmet>
+      <PageSeo
+        title="Dumpster Rental FAQ Virginia Beach | Barrel Man Logistics"
+        description="Frequently asked questions about dumpster rentals in Virginia Beach. Learn about pricing, discounts, service areas, rental periods, and what you can dispose of."
+        canonical="https://www.barrelmandumpsters.com/faq"
+      />
 
       <Header />
 

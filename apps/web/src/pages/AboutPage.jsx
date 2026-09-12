@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageSeo from '@/components/PageSeo.jsx';
 import { motion } from 'framer-motion';
 import { Award, Shield, Target, Heart } from 'lucide-react';
 import Header from '@/components/Header.jsx';
@@ -8,17 +8,11 @@ import Footer from '@/components/Footer.jsx';
 function AboutPage() {
   return (
     <>
-      <Helmet>
-        <title>About Barrel Man Logistics | Virginia Beach</title>
-        <meta
-          name="description"
-          content="Learn about veteran-owned Barrel Man Logistics, providing dependable dumpster rentals throughout Virginia Beach and Hampton Roads. Contact us today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.barrelmandumpsters.com/about"
-        />
-      </Helmet>
+      <PageSeo
+        title="About Barrel Man Logistics | Virginia Beach"
+        description="Learn about veteran-owned Barrel Man Logistics, providing dependable dumpster rentals throughout Virginia Beach and Hampton Roads. Contact us today."
+        canonical="https://www.barrelmandumpsters.com/about"
+      />
 
       <Header />
 

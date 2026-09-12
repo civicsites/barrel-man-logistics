@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageSeo from '@/components/PageSeo.jsx';
 import { motion } from 'framer-motion';
 import { XCircle, AlertTriangle, Phone } from 'lucide-react';
 import Header from '@/components/Header.jsx';
@@ -47,19 +47,11 @@ function DumpsterRulesPage() {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Dumpster Rules Virginia Beach | Prohibited Items & Guidelines
-        </title>
-        <meta
-          name="description"
-          content="Review dumpster rental rules for Virginia Beach and Hampton Roads, including prohibited materials, loading limits, and safe-use guidelines today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.barrelmandumpsters.com/rules"
-        />
-      </Helmet>
+      <PageSeo
+        title="Dumpster Rules Virginia Beach | Prohibited Items & Guidelines"
+        description="Review dumpster rental rules for Virginia Beach and Hampton Roads, including prohibited materials, loading limits, and safe-use guidelines today."
+        canonical="https://www.barrelmandumpsters.com/rules"
+      />
 
       <Header />
 

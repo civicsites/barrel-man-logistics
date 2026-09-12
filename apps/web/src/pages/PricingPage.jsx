@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
+import PageSeo from '@/components/PageSeo.jsx';
 import { motion } from 'framer-motion';
 import { DollarSign, Award, Calendar, Briefcase } from 'lucide-react';
 import Header from '@/components/Header.jsx';
@@ -53,17 +53,11 @@ function PricingPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Dumpster Rental Pricing Virginia Beach | Barrel Man Logistics</title>
-        <meta
-          name="description"
-          content="View transparent pricing for 10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads, including monthly rental options today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.barrelmandumpsters.com/pricing"
-        />
-      </Helmet>
+      <PageSeo
+        title="Dumpster Rental Pricing Virginia Beach | Barrel Man Logistics"
+        description="View transparent pricing for 10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads, including monthly rental options today."
+        canonical="https://www.barrelmandumpsters.com/pricing"
+      />
 
       <Header />
 

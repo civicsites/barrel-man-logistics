@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import PageSeo from '@/components/PageSeo.jsx';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Send, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
 import Header from '@/components/Header.jsx';
@@ -108,19 +108,11 @@ function ContactPage() {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Dumpster Rental Quote Virginia Beach | Barrel Man Logistics
-        </title>
-        <meta
-          name="description"
-          content="Request a dumpster rental quote in Virginia Beach or Hampton Roads. Call or text Barrel Man Logistics at (757) 618-0273 today for your project."
-        />
-        <link
-          rel="canonical"
-          href="https://www.barrelmandumpsters.com/contact"
-        />
-      </Helmet>
+      <PageSeo
+        title="Dumpster Rental Quote Virginia Beach | Barrel Man Logistics"
+        description="Request a dumpster rental quote in Virginia Beach or Hampton Roads. Call or text Barrel Man Logistics at (757) 618-0273 today for your project."
+        canonical="https://www.barrelmandumpsters.com/contact"
+      />
 
       <Header />
 

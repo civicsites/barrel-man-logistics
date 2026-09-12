@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import PageSeo from '@/components/PageSeo.jsx';
 import { motion } from 'framer-motion';
 import { Home, Building2, Truck, Calendar } from 'lucide-react';
 import Header from '@/components/Header.jsx';
@@ -74,19 +74,11 @@ function ServicesPage() {
 
   return (
     <>
-      <Helmet>
-        <title>
-          Dumpster Rental Services Virginia Beach | Barrel Man Logistics
-        </title>
-        <meta
-          name="description"
-          content="Residential, commercial, construction, hauling, and recurring dumpster rental services throughout Virginia Beach and Hampton Roads. Call us today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.barrelmandumpsters.com/services"
-        />
-      </Helmet>
+      <PageSeo
+        title="Dumpster Rental Services Virginia Beach | Barrel Man Logistics"
+        description="Residential, commercial, construction, hauling, and recurring dumpster rental services throughout Virginia Beach and Hampton Roads. Call us today."
+        canonical="https://www.barrelmandumpsters.com/services"
+      />
 
       <Header />
 
