@@ -63,9 +63,7 @@ function ServiceAreaPage() {
   return (
     <>
       <Helmet>
-        <title>
-          Dumpster Rental Service Area | Virginia Beach, Norfolk, Chesapeake & Hampton Roads
-        </title>
+        <title>Dumpster Rental Service Area | Hampton Roads VA</title>
         <meta
           name="description"
           content="Dumpster rental service across Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, and Hampton Roads communities."
