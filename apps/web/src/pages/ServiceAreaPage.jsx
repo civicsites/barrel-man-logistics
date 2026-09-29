@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import PageSeo from '@/components/PageSeo.jsx';
 import { motion } from 'framer-motion';
 import { MapPin, Phone } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
-import InteractiveServiceMap from '@/components/InteractiveServiceMap.jsx';
+import ClientOnly from '@/components/ClientOnly.jsx';
+
+const InteractiveServiceMap = lazy(() => import('@/components/InteractiveServiceMap.jsx'));
+
+const mapPlaceholder = (
+  <div
+    className="bg-muted rounded-2xl h-[500px] w-full flex items-center justify-center px-6 text-center"
+    aria-hidden="true"
+  >
+    <p className="text-muted-foreground leading-relaxed">
+      Interactive service area map loads after the page opens.
+    </p>
+  </div>
+);
 
 function ServiceAreaPage() {
   const serviceAreas = [
@@ -68,6 +81,8 @@ function ServiceAreaPage() {
         canonical="https://www.barrelmandumpsters.com/service-area"
       />
 
+      <Header />
+
       <main>
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
@@ -126,9 +141,15 @@ function ServiceAreaPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-muted rounded-2xl h-[500px] w-full"
+                className="h-[500px] w-full"
               >
-                <InteractiveServiceMap />
+                <ClientOnly fallback={mapPlaceholder}>
+                  <Suspense fallback={mapPlaceholder}>
+                    <div className="h-full w-full">
+                      <InteractiveServiceMap />
+                    </div>
+                  </Suspense>
+                </ClientOnly>
               </motion.div>
             </div>
           </div>

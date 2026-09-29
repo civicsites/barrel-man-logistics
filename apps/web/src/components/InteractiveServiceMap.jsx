@@ -81,7 +81,7 @@ export default function InteractiveServiceMap() {
 
   if (!mounted) {
     return (
-      <div className="w-full h-full bg-muted/50 rounded-2xl flex items-center justify-center animate-pulse">
+      <div className="w-full h-full min-h-[500px] bg-muted/50 rounded-2xl flex items-center justify-center animate-pulse">
         <MapPin className="w-12 h-12 text-muted-foreground/30" />
       </div>
     );
@@ -112,12 +112,12 @@ export default function InteractiveServiceMap() {
   return (
     <>
       <style>{popupStyle}</style>
-      <div className="w-full h-full relative rounded-2xl overflow-hidden shadow-sm border border-border/50 isolate">
+      <div className="w-full h-full min-h-[500px] relative rounded-2xl overflow-hidden shadow-sm border border-border/50 isolate">
         <MapContainer 
           center={mapCenter} 
           zoom={10} 
           scrollWheelZoom={false}
-          style={{ height: '100%', width: '100%', zIndex: 1 }}
+          style={{ height: '500px', width: '100%', zIndex: 1 }}
           className="z-0"
         >
           <TileLayer

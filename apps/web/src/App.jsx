@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter as Router, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop.jsx';
 import HomePage from './pages/HomePage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
@@ -15,7 +15,7 @@ import { Toaster } from '@/components/ui/sonner';
 
 function App() {
     return (
-        <Router>
+        <>
             <ScrollToTop />
             <Routes>
                 <Route path="/" element={<HomePage />} />
@@ -42,7 +42,7 @@ function App() {
                 } />
             </Routes>
             <Toaster />
-        </Router>
+        </>
     );
 }
 

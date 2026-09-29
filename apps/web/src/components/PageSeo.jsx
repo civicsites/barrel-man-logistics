@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 const SITE_NAME = 'Barrel Man Logistics';
 const OG_IMAGE = 'https://www.barrelmandumpsters.com/images/hero.jpg';
@@ -9,6 +9,7 @@ function PageSeo({ title, description, canonical }) {
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonical} />
 
       <meta property="og:title" content={title} />

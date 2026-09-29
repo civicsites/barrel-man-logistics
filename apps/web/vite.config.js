@@ -402,5 +402,14 @@ export default defineConfig({
 				pluginTimings: false,
 			}
 		}
-	}
+	},
+	ssr: {
+		noExternal: [
+			'react-helmet-async',
+			'framer-motion',
+			'lucide-react',
+			'next-themes',
+			/@radix-ui\/.*/,
+		],
+	},
 });
