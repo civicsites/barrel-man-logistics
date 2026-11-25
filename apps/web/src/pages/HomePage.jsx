@@ -68,6 +68,7 @@ function HomePage() {
           url: 'https://www.barrelmandumpsters.com/',
           logo: 'https://www.barrelmandumpsters.com/images/logo.jpg',
           telephone: '+1-757-618-0273',
+          sameAs: ['https://share.google/rHxuB9aDOsToLT5rf'],
         }}
       />
       <Header />
