@@ -60,6 +60,15 @@ function HomePage() {
         title="Dumpster Rental Virginia Beach & Hampton Roads | Barrel Man Logistics"
         description="10-yard and 30-yard dumpster rentals in Virginia Beach and Hampton Roads. Call Barrel Man Logistics for residential, commercial, and construction service."
         canonical="https://www.barrelmandumpsters.com/"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          '@id': 'https://www.barrelmandumpsters.com/#organization',
+          name: 'Barrel Man Logistics',
+          url: 'https://www.barrelmandumpsters.com/',
+          logo: 'https://www.barrelmandumpsters.com/images/logo.jpg',
+          telephone: '+1-757-618-0273',
+        }}
       />
       <Header />
 

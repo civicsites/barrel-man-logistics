@@ -14,7 +14,7 @@ function injectPrerenderedHtml(template, { html, head }) {
   const withoutEmptyTitle = template.replace(/<title>\s*<\/title>\s*/i, '');
   const withHead = withoutEmptyTitle.replace(
     /(\t*)<\/head>/,
-    `$1${head.split('\n').join(`\n$1`)}\n$1</head>`
+    (_, indent) => `${indent}${head.split('\n').join(`\n${indent}`)}\n${indent}</head>`
   );
   return withHead.replace(
     '<div id="root"></div>',

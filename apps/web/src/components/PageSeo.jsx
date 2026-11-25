@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 const SITE_NAME = 'Barrel Man Logistics';
 const OG_IMAGE = 'https://www.barrelmandumpsters.com/images/hero.jpg';
 
-function PageSeo({ title, description, canonical }) {
+function PageSeo({ title, description, canonical, structuredData }) {
   return (
     <Helmet>
       <title>{title}</title>
@@ -23,6 +23,11 @@ function PageSeo({ title, description, canonical }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={OG_IMAGE} />
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData).replace(/</g, '\\u003c')}
+        </script>
+      )}
     </Helmet>
   );
 }

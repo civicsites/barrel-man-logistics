@@ -65,6 +65,18 @@ function FAQPage() {
         title="Dumpster Rental FAQ Virginia Beach | Barrel Man Logistics"
         description="Frequently asked questions about dumpster rentals in Virginia Beach. Learn about pricing, discounts, service areas, rental periods, and what you can dispose of."
         canonical="https://www.barrelmandumpsters.com/faq"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map(({ question, answer }) => ({
+            '@type': 'Question',
+            name: question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: answer,
+            },
+          })),
+        }}
       />
 
       <Header />
